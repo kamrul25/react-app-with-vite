@@ -28,8 +28,36 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <Person></Person>
+      <Mobile></Mobile>
     </div>
   )
 }
 
+function Person(){
+  return (
+    <div>
+      <h2>Kamrul Hasan Jaman</h2>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit soluta consectetur voluptatum perferendis culpa eaque. Totam debitis veniam facere labore?</p>
+    </div>
+  )
+}
+
+function Mobile(){
+  const [power, setPower] = useState(100);
+  const decreasePower = () => {
+    if(power > 0){
+      setPower(power - 10)
+    }else{
+      return;
+    }
+  };
+  
+  return (
+    <div>
+      <h3>Power:{power}%</h3>
+      <button onClick={decreasePower}>battery down</button>
+    </div>
+  )
+}
 export default App
