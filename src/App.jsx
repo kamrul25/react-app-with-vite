@@ -2,12 +2,15 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Person from './components/Person/Person'
+import Device from './components/Device/Device'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div className="App">
+      <Device></Device>
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -34,14 +37,14 @@ function App() {
   )
 }
 
-function Person(){
-  return (
-    <div>
-      <h2>Kamrul Hasan Jaman</h2>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit soluta consectetur voluptatum perferendis culpa eaque. Totam debitis veniam facere labore?</p>
-    </div>
-  )
-}
+// function Person(){
+//   return (
+//     <div>
+//       <h2>Kamrul Hasan Jaman</h2>
+//       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit soluta consectetur voluptatum perferendis culpa eaque. Totam debitis veniam facere labore?</p>
+//     </div>
+//   )
+// }
 
 function Mobile(){
   const [power, setPower] = useState(100);
